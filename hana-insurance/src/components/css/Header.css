@@ -1,0 +1,54 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header-links {
+  display: flex;
+  list-style: none;
+}
+
+.header-links li {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-auth {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.header-auth li {
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}

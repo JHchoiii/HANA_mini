@@ -1,0 +1,162 @@
+/* 스크롤바를 스타일링하는 클래스 */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #54d2c4 #f1fffe; /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비 설정 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  /* background: #f1fffe; /*스크롤바 트랙 배경색 */
+  border-radius: 10px; /* 트랙의 모서리를 둥글게 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #54d2c4; /* 스크롤바 색상 */
+  border-radius: 10px; /* 스크롤바 모서리를 둥글게 */
+  border: 3px solid #f1fffe; /* 스크롤바 내부 공간, 트랙과 색상 일치 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #32867d; /* 스크롤바 호버 시 색상 */
+  border-radius: 10px; /* 호버 시에도 라운드를 유지 */
+}
+
+@keyframes fillBorder {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  12.5% {
+    border-top-color: #54d2c4;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  37.5% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: #54d2c4;
+  }
+  62.5% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: #54d2c4;
+  }
+  75% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: #54d2c4;
+  }
+  87.5% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: #54d2c4;
+  }
+  100% {
+    border-top-color: #54d2c4;
+    border-right-color: #54d2c4;
+    border-bottom-color: #54d2c4;
+    border-left-color: #54d2c4;
+  }
+}
+
+.card-border-animation {
+  border: 4px solid transparent;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-border-animation:hover {
+  animation: fillBorder 0.7s linear forwards;
+}
+
+/* 기존 원 애니메이션 */
+/* 원 애니메이션 */
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 103px; /* 초기값은 전체 경로 길이 */
+  }
+  100% {
+    stroke-dashoffset: 0; /* 0으로 이동하면 경로가 전부 그려짐 */
+  }
+}
+
+.animated-path {
+  stroke-dasharray: 103px; /* 총 길이와 동일하게 설정 */
+  stroke-dashoffset: 103px; /* 시작할 때 stroke가 안 보이도록 설정 */
+  animation: drawPath 1s ease forwards; /* 2초 동안 그려지는 애니메이션 */
+}
+
+/* 체크 표시 애니메이션 */
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 32px; /* 초기값은 전체 경로 길이 */
+  }
+  100% {
+    stroke-dashoffset: 0; /* 0으로 이동하면 경로가 전부 그려짐 */
+  }
+}
+
+.animated-check {
+  stroke-dasharray: 32px; /* 총 길이와 동일하게 설정 */
+  stroke-dashoffset: 32px; /* 시작할 때 stroke가 안 보이도록 설정 */
+  animation: drawCheck 0.5s ease forwards 1s; /* 원 애니메이션 후에 1초 동안 그려지는 애니메이션 */
+}
+
+/* src/index.css 또는 별도의 CSS 파일에서 */
+.star-container {
+  position: relative;
+  width: 550px; /* 이미지의 너비에 맞게 설정 */
+  height: 92px; /* 이미지의 높이에 맞게 설정 */
+  overflow: hidden;
+}
+
+.non_colored_star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px; /* 이미지의 너비에 맞게 설정 */
+  height: 92px; /* 이미지의 높이에 맞게 설정 */
+  z-index: 1;
+}
+
+.colored_star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: inset(0 100% 0 0); /* 처음에는 색상이 안 보이도록 설정 */
+  animation: revealStars 1.5s ease-in forwards; /* 2초 동안 애니메이션 적용 */
+}
+
+@keyframes revealStars {
+  0% {
+    clip-path: inset(0 100% 0 0); /* 처음에는 안 보이게 */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* 전체가 보이도록 */
+  }
+}

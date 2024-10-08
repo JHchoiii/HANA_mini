@@ -1,0 +1,55 @@
+.icon-animation {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden; /* 박스 안에서만 코인이 보이도록 */
+}
+
+.coin {
+  position: absolute;
+  opacity: 0; /* 초기 상태는 투명하게 */
+  transform: translateY(-30px); /* 초기 위치를 상단으로 설정 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.sub-coin-1 {
+  width: 44px;
+  height: 90px;
+  top: 10px;
+  left: 50px;
+  background: url("https://day.hanainsure.co.kr/static/resources/platform/oneday/images/insurance_intro/sub_coin_1.svg")
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.sub-coin-2 {
+  width: 29px;
+  height: 60px;
+  left: 30px;
+  background: url("https://day.hanainsure.co.kr/static/resources/platform/oneday/images/insurance_intro/sub_coin_2.svg")
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.sub-coin-3 {
+  width: 34px;
+  height: 28px;
+  top: 50px;
+  background: url("https://day.hanainsure.co.kr/static/resources/platform/oneday/images/insurance_intro/sub_coin_3.svg")
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.sub-coin-down {
+  width: 35px;
+  height: 45px;
+  background: url("https://day.hanainsure.co.kr/static/resources/platform/oneday/images/insurance_intro/sub-coin-down.svg")
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0); /* 원래 위치로 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

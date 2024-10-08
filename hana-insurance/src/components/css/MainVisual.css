@@ -1,0 +1,17 @@
+.hidden {
+  visibility: hidden;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ebebeb; /* Default bullet color */
+  opacity: 1; /* Ensure it's fully visible */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #54d2c4; /* Active bullet color */
+}
+
+/* .MainVisual {
+  max-width: 100%;
+  height: 90vh;
+} */

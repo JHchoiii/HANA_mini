@@ -1,0 +1,2 @@
+accident_month,age,claim_count,claim_delay_days,claim_frequency,claim_type,contract_days,contract_id,document_issuer,email,email_dup_count,fraud_count,gender,identification_number,insurance_id,is_reviewed,issuer_dup_count,point,quick_claim,quick_claims_flag,rule1_score,rule2_score,rule3_score,rule4_score,rule5_score,rule6_score,status_x,status_y,total_premium
+1,34,1,16,0.2,0,5,340,646,52,5,0,1,9005201630396,3,1,0,880.0,1,0,0.0,20.0,21.0,0.0,0.0,0.0,0,0,50000.0
