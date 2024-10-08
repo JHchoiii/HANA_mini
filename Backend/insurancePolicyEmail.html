@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>원데이 자동차보험 보험증권</title>
+  <meta charset="UTF-8">
+  <style>
+    /* tempPage.jsx와 동일한 스타일 적용 */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .header-line {
+      display: flex;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .header-line div {
+      height: 6px;
+    }
+    .header-line .red {
+      background-color: #e53e3e;
+      width: 80%;
+    }
+    .header-line .blue {
+      background-color: #009CA6;
+      width: 20%;
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .title .text {
+      max-width: 70%;
+    }
+    .title .text .subtitle {
+      font-size: 12px;
+      color: #718096;
+    }
+    .title .text .main-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .divider {
+      border-bottom: 1px solid #4a5568;
+      margin-bottom: 10px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .table th, .table td {
+      border: 1px solid #e2e8f0;
+      padding: 8px;
+    }
+    .table th {
+      background-color: #f7fafc;
+      font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .note {
+      font-size: 12px;
+      color: #718096;
+      margin-top: 5px;
+    }
+    .footer {
+      text-align: right;
+      margin-top: 50px;
+    }
+    .footer .date {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer .signature {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 상단 컬러 라인 -->
+<div class="header-line">
+  <div class="red"></div>
+  <div class="blue"></div>
+</div>
+
+<!-- Header Section -->
+<div class="title">
+  <div class="text">
+    <div class="subtitle">자동차업무-C02-170301</div>
+    <div class="main-title">원데이 자동차보험 보험증권</div>
+  </div>
+  <img src="cid:logoImage" alt="logo" style="width: 200px; margin-top: 10px;">
+</div>
+
+<!-- Custom Divider -->
+<div class="divider"></div>
+
+<!-- 계약 정보 -->
+<table class="table">
+  <tbody>
+  <tr>
+    <td>계약번호</td>
+    <td>17510-317</td>
+    <td>계약일자</td>
+    <td>2024.09.29</td>
+  </tr>
+  <tr>
+    <td>피보험자</td>
+    <td>한이음</td>
+    <td>보험계약자</td>
+    <td>최배달</td>
+  </tr>
+  <tr>
+    <td>보험기간</td>
+    <td colspan="3">2024.09.29 00:00 ~ 2024.10.03 00:00</td>
+  </tr>
+  <tr>
+    <td>납입방법</td>
+    <td>일시납</td>
+    <td>보험종목</td>
+    <td>원데이 자동차 보험</td>
+  </tr>
+  <tr>
+    <td>피보험자동차</td>
+    <td>12가3456</td>
+    <td>적용보험료</td>
+    <td>4150 원</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- 보험가입사항 -->
+<div>
+  <div class="section-title">▣ 보험가입사항</div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>담보 및 특약</th>
+      <th>보험가입금액</th>
+      <th>가입여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>타인차량복구(원데이)</td>
+      <td>1사고당 최고 3천만원한도 (자기부담금 50만원)</td>
+      <td>가입</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="note">
+    * 타인차량 복구비용에서 보상하는 사고는 타차량과의 충돌 또는 접촉으로 인한 손해에 한함
+  </div>
+</div>
+
+<!-- 특별약관 -->
+<div>
+  <div class="section-title">▣ 특별약관</div>
+  <div class="divider"></div>
+</div>
+
+<!-- 예금자보호안내 -->
+<div>
+  <div class="section-title">▣ 예금자보호안내</div>
+  <div class="note">
+    ※ 이 보험계약은 예금자보호법에 따라 해약환급금(또는 만기시 보험금)에 기타지급금을 합한 금액이 1인당 “5천만원까지”(본 보험회사의 여타 보호상품과 합산) 보호됩니다. 이와 별도로 본 보험회사 보호상품의 사고보험금을 합산한 금액이 1인당 “5천만원까지” 보호됩니다.
+  </div>
+</div>
+
+<!-- 기타사항 -->
+<div>
+  <div class="section-title">▣ 기타사항</div>
+  <div class="note">
+    저희 회사는 보험 계약을 정상적으로 체결하고 그 증거로 보험가입증서(보험증권)를 하나손해보험(주)에서 발행합니다. <span>2024.09.29</span>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="date">2024년 9월 29일 00:50:06</div>
+  <div class="signature">
+    <div>대표이사 배성완</div>
+    <div>하나손해보험(주)</div>
+  </div>
+</div>
+
+</body>
+</html>

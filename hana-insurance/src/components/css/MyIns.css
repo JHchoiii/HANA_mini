@@ -1,0 +1,127 @@
+/* MyIns.css */
+
+.MyIns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* width: 100%; */
+  /* overflow: hidden; */
+  background-color: #f2f6f5;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1700px; /* 전체 컨텐츠 최대 너비 설정 */
+  margin: 0 auto; /* 양옆 중앙정렬 */
+  font-family: "CustomFont", sans-serif;
+}
+
+.content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-top-right-radius: 10px; /* 오른쪽 위 모서리 */
+  border-bottom-right-radius: 10px; /* 오른쪽 아래 모서리 */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.info-box {
+  display: flex;
+  /* justify-content: center; */
+  padding: 20px;
+  background-color: #54d2c4;
+  width: 70%;
+  height: 400px;
+  border-top-right-radius: 10px; /* 오른쪽 위 모서리 */
+  border-bottom-right-radius: 10px; /* 오른쪽 아래 모서리 */
+  margin-bottom: 40px; /* 아래 여백 추가 */
+  color: #fff;
+  background: url("../../../public/infoboxSample1.png") no-repeat 50% 100%;
+}
+
+/* src/components/LoginWidget.css */
+.widget {
+  margin-right: 50px;
+  margin-bottom: 35px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 360px; /* 적절한 너비 설정 */
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border: 2px solid #54d2c385;
+}
+
+.shield-image {
+  width: 50px; /* 아이콘의 크기 조정 */
+  margin-bottom: 15px; /* 텍스트와 간격 조정 */
+}
+
+/* src/components/Footer.css */
+.footer {
+  padding: 20px;
+  width: 100%;
+  background-color: #f9f9fb;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #2d2d2d;
+  margin-left: 10px;
+}
+
+.content-2-box {
+  padding: 20px;
+  width: 80%;
+  background-color: #ffffff; /* 흰색 배경을 설정 */
+  border-radius: 10px;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border: 1px solid #e0e0e0; /* 얇은 회색 테두리 추가 */
+  font-size: 16px; /* 기본 텍스트 크기 설정 */
+}
+
+/* src/components/FrequentlyVisited.css */
+.frequently-visited {
+  padding: 20px;
+  width: 80%;
+  background-color: #ffffff; /* 흰색 배경을 설정 */
+  border-radius: 10px;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  border: 1px solid #e0e0e0; /* 얇은 회색 테두리 추가 */
+  font-size: 16px; /* 기본 텍스트 크기 설정 */
+}
+
+.frequently-visited-content {
+  display: flex; /* h2와 p를 가로로 정렬 */
+  align-items: center; /* 세로 축에서 중앙 정렬 */
+}
+
+.frequently-visited h2 {
+  font-size: 18px;
+  color: #00bfa5; /* 제목을 #00bfa5 색상으로 설정 */
+  margin-right: 10px; /* 제목과 본문 사이의 간격 */
+}
+
+.frequently-visited p {
+  font-size: 14px;
+  color: #333333;
+  margin: 0; /* 본문 텍스트의 기본 마진 제거 */
+}
+
+.frequently-visited hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0; /* 얇은 회색 선 */
+  margin: 10px 0; /* 선 위 아래로 여백 추가 */
+}

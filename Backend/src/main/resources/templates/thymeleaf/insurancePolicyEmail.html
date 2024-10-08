@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>원데이 자동차보험 보험증권</title>
+  <meta charset="UTF-8" />
+  <style>
+    /* 기존 스타일 유지 */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .header-line {
+      width: 100%;
+      height: 6px;
+      background-color: #e53e3e;
+      margin-bottom: 10px;
+    }
+    .blue-line {
+      width: 100%;
+      height: 6px;
+      background-color: #009CA6;
+      margin-bottom: 20px;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    .title .subtitle {
+      font-size: 12px;
+      color: #718096;
+    }
+    .title .main-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .divider {
+      border-bottom: 1px solid #4a5568;
+      margin-bottom: 10px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .table th, .table td {
+      border: 1px solid #e2e8f0;
+      padding: 8px;
+    }
+    .table th {
+      background-color: #f7fafc;
+      font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .note {
+      font-size: 12px;
+      color: #718096;
+      margin-top: 5px;
+    }
+    .footer {
+      text-align: right;
+      margin-top: 50px;
+    }
+    .footer .date {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer .signature {
+      font-size: 14px;
+    }
+
+    /* 서명 섹션 스타일 */
+    .signature-section {
+      margin-top: 30px;
+      position: relative;
+      width: 300px; /* 서명 이미지의 너비에 맞게 조정 */
+      height: 150px; /* 서명 이미지의 높이에 맞게 조정 */
+    }
+
+    .signature-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin-left: 50px;
+      margin-top: 30px;
+    }
+
+    .signature-text {
+      position: absolute;
+      bottom: 10px; /* 서명 이미지 아래쪽에 위치 */
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .signature-text .signature-mark {
+      position: absolute;
+      top: 60%; /* 이미지 중앙에 위치하도록 조정 */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 상단 컬러 라인 -->
+<div class="header-line"></div>
+<div class="blue-line"></div>
+
+<!-- Header Section -->
+<div class="title">
+  <div class="subtitle">자동차업무-C02-170301</div>
+  <div class="main-title">원데이 자동차보험 보험증권</div>
+</div>
+
+<!-- Custom Divider -->
+<div class="divider"></div>
+
+<!-- 계약 정보 -->
+<table class="table">
+  <tbody>
+  <tr>
+    <td>계약번호</td>
+    <td th:text="${contract.contractId}"></td>
+    <td>계약일자</td>
+    <td th:text="${#dates.format(contract.startDate, 'yyyy.MM.dd')}"></td>
+  </tr>
+  <tr>
+    <td>피보험자</td>
+    <td th:text="${contract.insuredPerson}"></td>
+    <td>보험계약자</td>
+    <td th:text="${contract.contractor}"></td>
+  </tr>
+  <tr>
+    <td>보험기간</td>
+    <td colspan="3" th:text="${#dates.format(contract.startDate, 'yyyy.MM.dd HH:mm')} + ' ~ ' + ${#dates.format(contract.endDate, 'yyyy.MM.dd HH:mm')}"></td>
+  </tr>
+  <tr>
+    <td>납입방법</td>
+    <td>일시납</td>
+    <td>보험종목</td>
+    <td th:text="${contract.insuranceProduct.insuranceName}"></td>
+  </tr>
+  <tr>
+    <td>피보험자동차</td>
+    <td th:text="${contract.additionalInformation.vehicleNumber != null ? contract.additionalInformation.vehicleNumber : 'N/A'}"></td>
+    <td>적용보험료</td>
+    <td th:text="${contract.totalPremium} + ' 원'"></td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- 보험가입사항 -->
+<div>
+  <div class="section-title">▣ 보험가입사항</div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>담보 및 특약</th>
+      <th>보험가입금액</th>
+      <th>가입여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>타인차량복구(원데이)</td>
+      <td>1사고당 최고 3천만원한도 (자기부담금 50만원)</td>
+      <td>가입</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="note">
+    * 타인차량 복구비용에서 보상하는 사고는 타차량과의 충돌 또는 접촉으로 인한 손해에 한함
+  </div>
+</div>
+
+<!-- 특별약관 -->
+<div>
+  <div class="section-title">▣ 특별약관</div>
+  <div class="divider"></div>
+</div>
+
+<!-- 예금자보호안내 -->
+<div>
+  <div class="section-title">▣ 예금자보호안내</div>
+  <div class="note">
+    ※ 이 보험계약은 예금자보호법에 따라 해약환급금(또는 만기시 보험금)에 기타지급금을 합한 금액이 1인당 “5천만원까지”(본 보험회사의 여타 보호상품과 합산) 보호됩니다. 이와 별도로 본 보험회사 보호상품의 사고보험금을 합산한 금액이 1인당 “5천만원까지” 보호됩니다.
+  </div>
+</div>
+
+<!-- 기타사항 -->
+<div>
+  <div class="section-title">▣ 기타사항</div>
+  <div class="note">
+    저희 회사는 보험 계약을 정상적으로 체결하고 그 증거로 보험가입증서(보험증권)를 하나손해보험(주)에서 발행합니다. <span th:text="${#dates.format(contract.startDate, 'yyyy.MM.dd')}"></span>
+  </div>
+</div>
+
+<!-- 서명 섹션 -->
+<div class="signature-section">
+  <img th:if="${signature != null}" th:src="${signature}" alt="서명" />
+  <div class="signature-text">
+    서명: <span th:text="${contract.insuredPerson}">홍길동 (인)</span>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="date" th:text="${#dates.format(#dates.createNow(), 'yyyy년 M월 d일 HH:mm:ss')}"></div>
+  <div class="signature">
+    <div>대표이사 배성완</div>
+    <div>하나손해보험(주)</div>
+  </div>
+</div>
+
+</body>
+</html>

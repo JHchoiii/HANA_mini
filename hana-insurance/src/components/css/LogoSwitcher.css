@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "CustomFont"; /* 폰트에 대한 사용자 정의 이름 */
+  src: url("../../../public/fonts/Hana2-Regular.otf") format("opentype"); /* 폰트 파일의 경로와 형식 */
+}
+
+.HanaLogoWrapper {
+  font-family: "CustomFont", sans-serif; /* 사용자 정의 폰트 적용 */
+}

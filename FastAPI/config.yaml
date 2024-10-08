@@ -1,0 +1,13 @@
+
+dataset: user_data
+field_separator: "\t"
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: insurance_id
+RATING_FIELD: rating
+load_col:
+  inter: [user_id, insurance_id, rating]
+
+training_epochs: 10  # 빠른 학습을 위해 epoch 1로 설정
+train_batch_size: 64  # 배치 크기 증가로 성능 향상
+embedding_size: 32  # 빠른 계산을 위해 임베딩 크기 감소
+log_interval: 1
