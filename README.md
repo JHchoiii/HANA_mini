@@ -1,4 +1,4 @@
-# [하나1QCT] - MZ세대를 위한 SIMPLE&SAFE 플랫폼
+# [하나 mini] - MZ세대 맞춤 미니보험 플랫폼
 
 #### 2024 하나금융티아이 채용연계형 교육 최종프로젝트
 
@@ -71,7 +71,7 @@ SSSS
 
 | 구분       | 내용                                                                                         | 비고                                                          |
 | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| 이름       | 최준혁                                                                                       |     <img width="130px" src="![최준혁여권(온라인접수용) (1)](https://github.com/user-attachments/assets/96e09c3c-446d-4923-b2f0-cacf9c9ced58)
+| 이름       | 최준혁                                                                                       |     <img width="130px" src="https://github.com/user-attachments/assets/96e09c3c-446d-4923-b2f0-cacf9c9ced5
 ">                                                          |
 | 연락처     | 이메일                                                                                       | 401FLYPIG0@naver.com                                            |
 | Skill set  | Language                                                                                     | Java, Python, PL/SQL, Javascript, HTML, CSS, JSP, Thymeleaf   |
