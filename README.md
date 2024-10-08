@@ -71,11 +71,11 @@
 
 | 구분       | 내용                                                                                         | 비고                                                          |
 | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| 이름       | 최준혁                                                                                       |     <img width="130px" src="https://github.com/user-attachments/assets/96e09c3c-446d-4923-b2f0-cacf9c9ced5">  |
-| 연락처     | 이메일                                                                                       | 401FLYPIG0@naver.com                                            |
+| 이름       | 최준혁                                                                                       | <img src="https://github.com/user-attachments/assets/fbe3d7ed-0d8c-4a71-b45a-0411baaf8dbf" width="150"> |
+| 연락처     | 이메일                                                                                       | 401flypig@naver.com                                            |
 | Skill set  | Language                                                                                     | Java, Python, PL/SQL, Javascript, HTML, CSS, JSP, Thymeleaf   |
 |            | Framework                                                                                    | Spring, SpringBoot, FastAPI                                     |
 |            | Database                                                                                     | Oracle                                                 |
 |            | Etc                                                                                          | Git, AWS, AWS RDS, Docker, CloudFront, Maven, Gradle          |
 |            | Tools                                                                                        | Eclipse, Intellij, Pycharm, Visual Studio code, SQL Developer |
-| 자격증     | 정보처리기사                                                                                 | 2022.06.17                                                    |
+| 자격증     | 정보처리기사                                                                                 | 2021.11.26                                                    |
