@@ -40,7 +40,7 @@
 - 
 
 ```
-SSSS
+
 ```
 
 ### 2-2. 서비스 개발
@@ -71,8 +71,7 @@ SSSS
 
 | 구분       | 내용                                                                                         | 비고                                                          |
 | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| 이름       | 최준혁                                                                                       |     <img width="130px" src="https://github.com/user-attachments/assets/96e09c3c-446d-4923-b2f0-cacf9c9ced5
-">                                                          |
+| 이름       | 최준혁                                                                                       |     <img width="130px" src="https://github.com/user-attachments/assets/96e09c3c-446d-4923-b2f0-cacf9c9ced5">  |
 | 연락처     | 이메일                                                                                       | 401FLYPIG0@naver.com                                            |
 | Skill set  | Language                                                                                     | Java, Python, PL/SQL, Javascript, HTML, CSS, JSP, Thymeleaf   |
 |            | Framework                                                                                    | Spring, SpringBoot, FastAPI                                     |
